@@ -179,48 +179,6 @@ if [ -n "$DOTFILES_URL" ]; then
 fi
 
 EOF
-
-# Clone GitHub repository for pandas_automl
-#echo "Cloning pandas_automl repository..."
-#if [ ! -d "pandas_automl" ]; then
-#  mkdir -p ~/.ssh
-#  ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-#  git clone --progress https://github.com/coder/pandas_automl.git >/#dev/null 2>&1 &
-#  wait
-#  echo "pandas_automl repository cloned."
-#else
-#  echo "pandas_automl repository already exists."
-#fi
-
-# Install code-server (VS Code in browser)
-#echo "Installing code-server..."
-#curl -fsSL https://code-server.dev/install.sh | sh
-#code-server --auth none --port 13337 >/dev/null 2>&1 &
-#wait
-#echo "code-server started."
-
-# Install VS Code extensions
-#echo "Installing VS Code extensions..."
-#SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item
-#code-server --install-extension ms-toolsai.jupyter 
-#code-server --install-extension ms-python.python 
-#code-server --install-extension ms-vsliveshare.vsliveshare
-#code-server --install-extension alefragnani.Bookmarks
-#code-server --install-extension donjayamanne.githistory
-#wait
-#echo "VS Code extensions installed."
-
-# Use coder CLI to clone and install dotfiles if DOTFILES_URL is set
-#if [ -n "$DOTFILES_URL" ]; then
-#  echo "Installing dotfiles from $DOTFILES_URL..."
-#  coder dotfiles -y "$DOTFILES_URL"
-#  echo "Dotfiles installed."
-#fi
-
-# Final output
-#echo "Startup script completed successfully."
-
-#EOF
 }
 
 # code-server
